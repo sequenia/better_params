@@ -7,11 +7,11 @@ require "better_params/version"
 Gem::Specification.new do |spec|
   spec.name        = "better_params"
   spec.version     = BetterParams::VERSION
-  spec.authors     = [""]
-  spec.email       = ["sb.truefalse@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of BetterParams."
-  spec.description = "TODO: Description of BetterParams."
+  spec.authors     = ["Bazov Peter"]
+  spec.email       = ["petr@sequenia.com", "sb.truefalse@gmail.com"]
+  spec.homepage    = "http://sequenia.com/"
+  spec.summary     = "Better Params"
+  spec.description = "Extension for default Rails params with useful features."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

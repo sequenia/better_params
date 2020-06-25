@@ -1,5 +1,7 @@
-require "better_params/railtie"
+require 'better_params/railtie'
+require 'better_params/base'
 
 module BetterParams
-  # Your code goes here...
 end
+
+ActionController::Parameters.include BetterParams::Base

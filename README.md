@@ -2,7 +2,7 @@
 Adds useful methods to `ActionController:: Parameters` for modifying parameters.
 
 ## Usage
-`ActionController:: Parameters` has useful methods for modifying parameters.
+`ActionController::Parameters` has useful methods for modifying parameters.
 
 ### AddDestroyInfo
 Adds the *_destroy* attribute to existing *has_many* associations that were not passed for modification.

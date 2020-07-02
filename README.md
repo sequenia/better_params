@@ -1,5 +1,5 @@
 # BetterParams
-Adds useful methods to `ActionController:: Parameters` for modifying parameters.
+Adds useful methods to `ActionController::Parameters` for modifying parameters.
 
 ## Usage
 `ActionController::Parameters` has useful methods for modifying parameters.

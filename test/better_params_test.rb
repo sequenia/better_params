@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class BetterParams::Test < ActiveSupport::TestCase
-  test "truth" do
+  test 'existence of the BetterParams module' do
     assert_kind_of Module, BetterParams
   end
 end

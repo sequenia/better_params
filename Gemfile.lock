@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    better_params (0.1.0)
+    better_params (0.2.0)
       rails (>= 5.0, < 8)
 
 GEM
@@ -167,4 +167,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   2.3.7
+   2.3.11

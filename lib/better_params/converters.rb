@@ -6,7 +6,12 @@ module BetterParams
       return true if value.is_a? TrueClass
       return false if value.is_a? FalseClass
 
-      value.to_s.downcase == 'true'
+      downcased_value = value.to_s.downcase
+
+      return true if ['true', '1'].include?(downcased_value)
+      return false if ['false', '0'].include?(downcased_value)
+
+      nil
     end
   end
 end

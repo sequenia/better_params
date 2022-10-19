@@ -1,3 +1,5 @@
+require 'rails'
+require 'action_controller'
 require 'better_params/railtie'
 require 'better_params/base'
 

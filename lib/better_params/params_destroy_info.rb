@@ -16,8 +16,10 @@ module BetterParams
         nested_params = params[key]
         next params if nested_params.nil?
 
+        # Try to fetch relation value
+        relation = object.public_send(relation_key(key))
+
         # Can't process key if a nested object doesn't exists
-        relation = object.public_send(key)
         next params if relation.nil?
 
         if relation.is_a? Enumerable
@@ -47,6 +49,12 @@ module BetterParams
       keys.reduce({}) do |hash, key|
         hash.merge(key.is_a?(Hash) ? key : { key => nil })
       end
+    end
+
+    # Removes the "_attributes" suffix if exists
+    def relation_key(key)
+      match_data = key.to_s.match(/(.+)_attributes\z/)
+      match_data.nil? ? key : match_data[1].to_sym
     end
 
     # Adds { id: 1, _destroy: true } objects to an array if an object with id

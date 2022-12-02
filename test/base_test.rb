@@ -13,7 +13,10 @@ class BetterParams::Base::Test < ActiveSupport::TestCase
       :end_datetime,
       :is_active,
       :is_show,
-      tags: [:id, :name]
+      {
+        tags: [:id, :name],
+        tags_attributes: [:id, :name]
+      }
     ]
   end
 

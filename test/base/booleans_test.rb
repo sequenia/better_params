@@ -2,6 +2,14 @@ require 'test_helper'
 
 class BetterParams::Base::Test < ActiveSupport::TestCase
   test '#booleans for true' do
+    hash_params = { is_active: true }
+    params = init_params(hash_params)
+    new_params = params.booleans(:is_active)
+
+    assert new_params[:is_active].is_a? TrueClass
+  end
+
+  test '#booleans for "true"' do
     hash_params = { is_active: 'true' }
     params = init_params(hash_params)
     new_params = params.booleans(:is_active)
@@ -18,6 +26,14 @@ class BetterParams::Base::Test < ActiveSupport::TestCase
   end
 
   test '#booleans for false' do
+    hash_params = { is_active: false }
+    params = init_params(hash_params)
+    new_params = params.booleans(:is_active)
+
+    assert new_params[:is_active].is_a? FalseClass
+  end
+
+  test '#booleans for "false"' do
     hash_params = { is_active: 'false' }
     params = init_params(hash_params)
     new_params = params.booleans(:is_active)
